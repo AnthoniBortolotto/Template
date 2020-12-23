@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loginha</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css.map" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/tabela.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="toast-header">
+        <img alt="Logo" src="img/logo.jfif" />
+        <nav class="navbar-dark nav">
+            <ul>
+                <li><a>Inicio</a></li>
+                <li><a>Sobre-nos</a></li>
+                <li><a>Apoie-nos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="produtos">
+        <h1 class="text-center titulo">Bem vindo a loja</h1>
+        <table class="table table-bordered tabela">
+            <thead>
+                <tr>
+                    <td>Nome do produto</td>
+                    <td>Quantidade</td>
+                    <td>Preço de compra</td>
+                    <td>Preço de venda</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <input value="adicionar" id="botao" class="btn btn-info" type="button">
+    </section>
+    <footer></footer>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/Database.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
