@@ -4,7 +4,7 @@ const DEV = true;
 
 module.exports = {
     entry: [
-        "./src/func.ts",
+        "./src/Database.ts",
         "./src/index.ts"
     ],
     resolve: {

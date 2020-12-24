@@ -1,6 +1,18 @@
-import func from "./func";
-const twitter: string = "shahzebdev";
-const days: number = 3;
-console.log(`My twitter is @${twitter} and it took me ${days} days to write this article`);
-console.log("mudou");
-func();
+import {Adicionar, CriarDB} from "./Database";
+import $ from "jquery"
+import Produto from "./Produto";
+
+async function Iniciar()
+{
+    await CriarDB();
+    eventoBotao();
+}
+
+function eventoBotao()
+{
+    let botaoAdd = $('#botao');
+    botaoAdd.on('click', () => Adicionar(new Produto("Jabuticaba", 12, 2.45, 6.00)));
+}
+
+Iniciar();
+

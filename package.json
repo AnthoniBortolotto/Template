@@ -4,12 +4,14 @@
     "description": "",
     "main": "index.html",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "npx webpack"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "bootstrap": "^4.5.3"
+        "@types/jquery": "^3.5.5",
+        "bootstrap": "^4.5.3",
+        "jquery": "^3.5.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.12.10",
