@@ -2,13 +2,13 @@ export default class Produto
 {
     nome:string;
     qtd:number;
-    PrcComp:number;
-    PrcVend:number;
-    constructor(nome:string, qtd:number, PrcComp:number, PrcVend:number) 
+    prcComp:number;
+    prcVend:number;
+    constructor(nome:string, qtd:number, prcComp:number, prcVend:number) 
     {
         this.nome = nome;
         this.qtd = qtd;
-        this.PrcComp = PrcComp;
-        this.PrcVend =  PrcVend;    
+        this.prcComp = prcComp;
+        this.prcVend =  prcVend;    
     }
 }

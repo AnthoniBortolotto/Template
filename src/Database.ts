@@ -1,4 +1,4 @@
-import Produto from "Produto.ts";
+import Produto from "./Produto";
 let db:IDBDatabase;
 const nomeDB = "Banco";
 const nomeLoja = "Produtos";
@@ -41,23 +41,35 @@ export function Adicionar(produto:Produto)
 
 export function montarTabela()
 {
+    let corpo = ``;
     let exibTransact = db.transaction(nomeLoja);
     let loja = exibTransact.objectStore(nomeLoja);
+    let produtos:Array<Produto> = []
 
     loja.openCursor().onsuccess = (event:any) => {
-        const cursor = <IDBDatabase>event.target.result;
+        const cursor = event.target.result;
         console.log(cursor);
-        // if(cursor)
-        // {
-        //     let tabela = document.querySelector('#corpo-tabela');
-        //     tabela.innerHTML = `
-        //     <tr>
-        //     <td>${cursor.}</td>
-        //     <td></td>
-        //     <td></td>
-        //     <td></td>
-        //     <td></td>
-        // </tr>`
-        // }
+        if(cursor)
+        {
+            produtos.push(new Produto(cursor.value.nome, cursor.value.qtd, cursor.value.PrcComp, cursor.value.PrcVend));
+            cursor.continue();
+        }
+        else
+        {
+            console.log(produtos);
+            produtos.forEach(produto => {
+                    corpo += `<tr>
+                <td>${produto.nome}</td>
+                <td>${produto.qtd}</td>
+                <td>${produto.prcComp}</td>
+                <td>${produto.prcVend}</td>
+                <td></td>
+                    </tr>`;
+                
+            });
+        }
+        loja.openCursor().onerror = () => console.log("deu um erro");
+        let tabela = document.querySelector('#corpo-tabela');
+        tabela.innerHTML = corpo; 
     }
 }
