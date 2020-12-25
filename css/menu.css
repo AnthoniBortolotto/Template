@@ -1,0 +1,17 @@
+.lista__menu {
+    display: inline-flex;
+    list-style: none;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.2rem;
+}
+
+.lista__menu__item {
+    padding: 0.2rem;
+    margin-right: 0.5rem;
+}
+
+.lista__menu__item__ancora:hover {
+    transition: 500ms;
+    text-decoration: underline;
+}

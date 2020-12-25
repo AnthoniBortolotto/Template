@@ -1,0 +1,12 @@
+.rodape {
+    width: 100%;
+    position: absolute;
+    color: rgba(59, 63, 63, 0.781);
+    margin-top: 2rem;
+    bottom: 2rem;
+}
+
+.rodape__texto {
+    padding-top: 1rem;
+    text-align: center;
+}

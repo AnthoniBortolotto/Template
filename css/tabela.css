@@ -1,0 +1,14 @@
+.titulo {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.tabela {
+    width: 60% !important;
+    margin: auto;
+}
+
+.botaoAdd {
+    margin-top: 3rem;
+    margin-right: 1rem;
+}

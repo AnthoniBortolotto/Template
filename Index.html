@@ -14,16 +14,16 @@
 <body>
     <header class="toast-header">
         <img alt="Logo" src="img/logo.jfif" />
-        <nav class="navbar-dark nav">
-            <ul>
-                <li><a>Inicio</a></li>
-                <li><a>Sobre-nos</a></li>
-                <li><a>Apoie-nos</a></li>
+        <nav class="navbar-dark nav menu">
+            <ul class="lista__menu">
+                <li class="lista__menu__item"><a class="btn btn-info lista__menu__item__ancora">Inicio</a></li>
+                <li class="lista__menu__item"><a class="btn btn-info lista__menu__item__ancora">Sobre-nos</a></li>
+                <li class="lista__menu__item"><a class="btn btn-info lista__menu__item__ancora">Apoie-nos</a></li>
             </ul>
         </nav>
     </header>
     <section class="produtos">
-        <h1 class="text-center titulo">Bem vindo a loja</h1>
+        <h3 class="text-center titulo">Bem vindo a lojinha</h3>
         <table class="table table-bordered tabela">
             <thead>
                 <tr>
@@ -37,9 +37,11 @@
             <tbody id="corpo-tabela">
             </tbody>
         </table>
-        <input value="adicionar" id="botao" class="btn btn-info" type="button">
+        <input value="Adicionar Produto" id="botao" class="btn btn-info botao-add" type="button">
     </section>
-    <footer></footer>
+    <footer class="border-top rodape">
+        <p class="rodape__texto">Loginha&trade; Todos os direitos reservados &copy; 2020</p>
+    </footer>
     <script src="dist/main.js"></script>
 </body>
 
