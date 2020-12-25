@@ -1,18 +1,15 @@
 import {Adicionar, CriarDB} from "./Database";
 import $ from "jquery"
 import Produto from "./Produto";
+import Paginas from "./Paginas";
 
 async function Iniciar()
 {
     await CriarDB();
-    eventoBotao();
+    await Paginas.pagTabela();
 }
 
-function eventoBotao()
-{
-    let botaoAdd = $('#botao');
-    botaoAdd.on('click', () => Adicionar(new Produto("Jabuticaba", 12, 2.45, 6.00)));
-}
+
 
 Iniciar();
 
