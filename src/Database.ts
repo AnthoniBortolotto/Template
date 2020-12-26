@@ -23,9 +23,6 @@ export function CriarDB()
                 autoIncrement: true
             });
 
-            loja.createIndex('lat', 'lat', {unique: false});
-            //loja.createIndex('lat', 'lat', {unique: false});
-
         }
     }
 }
@@ -51,11 +48,15 @@ export function montarTabela()
         console.log(cursor);
         if(cursor)
         {
-            produtos.push(new Produto(cursor.value.nome, cursor.value.qtd, cursor.value.PrcComp, cursor.value.PrcVend));
+            //aqui é undefined
+            let produtoAtual = new Produto(cursor.value.nome, cursor.value.qtd, cursor.value.prcComp, cursor.value.prcVend)
+            produtos.push(produtoAtual);
+            console.log(produtos);
             cursor.continue();
         }
         else
         {
+            
             console.log(produtos);
             produtos.forEach(produto => {
                     corpo += `<tr>
@@ -63,7 +64,7 @@ export function montarTabela()
                 <td>${produto.qtd}</td>
                 <td>${produto.prcComp}</td>
                 <td>${produto.prcVend}</td>
-                <td></td>
+                <td><a class="tabela__icone-lapis"></a><a class="tabela__icone-lixo"></a></td>
                     </tr>`;
                 
             });

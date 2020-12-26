@@ -8,7 +8,32 @@
     margin: auto;
 }
 
-.botaoAdd {
+.tabela__icone-lixo {
+    background: url("../img/lixoapagado.png") no-repeat;
+    background-size: contain;
+    margin-right: 0;
+    margin-left: 0.5rem;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.tabela__icone-lixo:hover {
+    background: url("../img/lixoaceso.png") no-repeat
+}
+
+.tabela__icone-lapis {
+    background: url("../img/lapis.png") no-repeat;
+    background-size: contain;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.tabela__icone-lapis:hover {
+    background: url("../img/lapisEscrevendo.png") no-repeat;
+}
+
+.botao-add {
+    display: block;
     margin-top: 3rem;
-    margin-right: 1rem;
+    margin-left: 17rem;
 }
