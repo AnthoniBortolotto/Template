@@ -12,10 +12,22 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.ts?$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader'
-        }]
+                test: /\.ts?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            },
+            {
+                test: /\.scss$/,
+                exclude: [/node_modules/],
+                use: [{
+                    loader: "style-loader"
+                }, {
+                    loader: "css-loader"
+                }, {
+                    loader: "sass-loader"
+                }]
+            }
+        ]
     },
     watch: true,
     watchOptions: {
