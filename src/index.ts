@@ -6,6 +6,7 @@ import "../css/index.css";
 import "../css/menu.css";
 import "../css/form-add.css";
 import "../css/tabela.css";
+import "../css/bootstrap.min.css";
 
 export async function Iniciar()
 {
