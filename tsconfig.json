@@ -1,31 +1,29 @@
-{ 
-    "compilerOptions":{ 
-       "target":"es6",
-       "moduleResolution":"node",
-       "module":"commonjs",
-       "declaration":false,
-       "noLib":false,
-       "emitDecoratorMetadata":true,
-       "experimentalDecorators":true,
-       "sourceMap":true,
-       "pretty":false,
-      //  "allowUnreachableCode":true,
-      //  "allowUnusedLabels":true,
-       "noImplicitAny":true,
-      //  "noImplicitReturns":false,
-      //  "noImplicitUseStrict":false,
-       "outDir":"dist/",
-      "baseUrl":"src/",
-      "paths": {"*.ts":["*"]},
-      "listFiles":false,
-      "noEmitHelpers":true,
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "umd",
+      "lib": [
+        "ES2015",
+        "ES2016",
+        "ES2017",
+        "ES2018",
+        "ES2019",
+        "ES2020",
+        "ESNext",
+        "dom"
+      ],
+      "jsx": "react",
+      "noEmit": true,
+      "sourceMap": true,
+      /* Strict Type-Checking Options */
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+     
+      /* Module Resolution Options */
+      "moduleResolution": "node",
+      "forceConsistentCasingInFileNames": true,
       "esModuleInterop": true
     },
-    "include":[ 
-       "src/**/*"
-    ],
-    "exclude":[ 
-       "node_modules"
-    ],
-    "compileOnSave":true
- }
+    "include": ["src"]
+  }

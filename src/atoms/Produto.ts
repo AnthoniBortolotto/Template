@@ -1,4 +1,4 @@
-export default class Produto
+ class Produto
 {
     nome:string;
     qtd:number;
@@ -12,3 +12,4 @@ export default class Produto
         this.prcVend =  prcVend;    
     }
 }
+export default Produto;

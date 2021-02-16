@@ -1,8 +1,3 @@
-.titulo {
-    padding-top: 0.5rem;
-    padding-bottom: 1rem;
-}
-
 .tabela {
     width: 60% !important;
     margin: auto;
@@ -14,7 +9,7 @@
     margin-right: 0;
     margin-left: 0.5rem;
     padding: 1rem;
-    padding-top: 0;
+    padding-top: 0.4rem;
 }
 
 .tabela__icone-lixo:hover {
@@ -25,15 +20,9 @@
     background: url("../img/lapis.png") no-repeat;
     background-size: contain;
     padding: 1rem;
-    padding-top: 0;
+    padding-top: 0.4rem;
 }
 
 .tabela__icone-lapis:hover {
     background: url("../img/lapisEscrevendo.png") no-repeat;
-}
-
-.botao-add {
-    display: block;
-    margin-top: 3rem;
-    margin-left: 17rem;
 }

@@ -1,46 +1,50 @@
-const path = require("path");
-
-const DEV = true;
-
+const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    entry: [
-        "./src/Database.ts",
-        "./src/index.ts"
+  entry: {
+    home: path.resolve(__dirname, './src/templates/index.tsx'),
+  },
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|ts)x?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.css$/,
+        exclude: [/node_modules/],
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.jpg|svg|png$/,
+        exclude: [/node_modules/],
+        use: ['url-loader']
+      },
     ],
-    resolve: {
-        extensions: [".ts", ".js"]
-    },
-    module: {
-        rules: [{
-                test: /\.ts?$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            },
-            {
-                test: /\.css$/,
-                exclude: [/node_modules/],
-                use: ['file-loader', 'style-loader', 'css-loader']
-            }
-        ]
-    },
-    watch: true,
-    watchOptions: {
-        ignored: /node_modules/
-    },
-    output: {
-        filename: "main.js",
-        path: path.resolve(__dirname, "dist")
-    },
-    mode: DEV ? "development" : "production",
-    devServer: {
-        contentBase: path.join(__dirname, "dist"),
-        compress: true,
-        port: 9000,
-        watchOptions: {
-            ignored: [
-                path.resolve(__dirname, "dist"),
-                path.resolve(__dirname, "node_modules")
-            ]
-        }
-    },
-};
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: path.resolve(__dirname,'./src/templates/index.html'),
+      filename: path.resolve(__dirname,'./dist/index.html')
+    })
+  ],
+  devServer: {
+    port: 8080,
+    contentBase: path.resolve(__dirname, './dist'),
+    compress: true,
+    historyApiFallback: true,
+  }
+
+}

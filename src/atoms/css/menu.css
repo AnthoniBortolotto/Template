@@ -1,0 +1,11 @@
+.lista__menu {
+    display: inline-flex;
+    list-style: none;
+    position: absolute;
+    right: 0.2rem;
+}
+
+.lista__menu__item {
+    padding: 0.1rem;
+    margin-right: 0.3rem;
+}
